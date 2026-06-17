@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Information Form</title>
+</head>
+<body>
+
+    <h2>Employee Information Form</h2>
+
+    <form action="#" method="post">
+
+        <label for="empid">Employee ID:</label><br>
+        <input type="text" id="empid" name="empid" required><br><br>
+
+        <label for="name">Employee Name:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="gender">Gender:</label><br>
+        <input type="radio" id="male" name="gender" value="Male">
+        <label for="male">Male</label>
+
+        <input type="radio" id="female" name="gender" value="Female">
+        <label for="female">Female</label>
+
+        <input type="radio" id="other" name="gender" value="Other">
+        <label for="other">Other</label>
+        <br><br>
+
+        <label for="dob">Date of Birth:</label><br>
+        <input type="date" id="dob" name="dob"><br><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email"><br><br>
+
+        <label for="phone">Mobile Number:</label><br>
+        <input type="tel" id="phone" name="phone"><br><br>
+
+        <label for="department">Department:</label><br>
+        <select id="department" name="department">
+            <option value="">--Select Department--</option>
+            <option value="HR">HR</option>
+            <option value="IT">IT</option>
+            <option value="Finance">Finance</option>
+            <option value="Marketing">Marketing</option>
+            <option value="Sales">Sales</option>
+        </select><br><br>
+
+        <label for="designation">Designation:</label><br>
+        <input type="text" id="designation" name="designation"><br><br>
+
+        <label for="salary">Salary:</label><br>
+        <input type="number" id="salary" name="salary"><br><br>
+
+        <label for="address">Address:</label><br>
+        <textarea id="address" name="address" rows="4" cols="30"></textarea><br><br>
+
+        <input type="submit" value="Submit">
+        <input type="reset" value="Clear">
+
+    </form>
+
+</body>
+</html>
