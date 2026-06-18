@@ -411,6 +411,97 @@
       .live-dot { animation: none; }
       .layer:hover { transform: none; }
     }
+
+    /* ── AUTHOR SECTION ── */
+    .author-section {
+      background: var(--surface);
+    }
+
+    .author-card {
+      display: flex;
+      align-items: flex-start;
+      gap: 2.5rem;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 2.5rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .author-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--accent), var(--accent2));
+    }
+
+    .author-avatar {
+      flex-shrink: 0;
+      width: 88px;
+      height: 88px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--accent2), var(--accent));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .author-initials {
+      font-family: var(--mono);
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: var(--bg);
+    }
+
+    .author-name {
+      font-size: clamp(1.4rem, 2.5vw, 2rem);
+      font-weight: 700;
+      color: var(--white);
+      letter-spacing: -0.02em;
+      margin-bottom: 0.3rem;
+    }
+
+    .author-role {
+      font-family: var(--mono);
+      font-size: 0.8rem;
+      color: var(--accent);
+      margin-bottom: 1rem;
+      letter-spacing: 0.03em;
+    }
+
+    .author-bio {
+      font-size: 0.95rem;
+      color: var(--muted);
+      max-width: 620px;
+      line-height: 1.7;
+      margin-bottom: 1.25rem;
+    }
+
+    .author-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      padding: 0.3rem 0.85rem;
+      font-size: 0.78rem;
+      color: var(--text);
+      font-family: var(--mono);
+    }
+
+    @media (max-width: 600px) {
+      .author-card { flex-direction: column; align-items: center; text-align: center; }
+      .author-badges { justify-content: center; }
+    }
   </style>
 </head>
 <body>
@@ -437,6 +528,30 @@
       <div class="stat">
         <span class="stat-num"><em>95%</em></span>
         <span class="stat-label">Breaches caused by human error</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AUTHOR INTRODUCTION -->
+<section class="author-section">
+  <div class="container">
+    <div class="author-card">
+      <div class="author-avatar">
+        <span class="author-initials">CS</span>
+      </div>
+      <div class="author-info">
+        <p class="section-label" style="margin-bottom:0.5rem;">About the Author</p>
+        <h2 class="author-name">Dr. Ch. Suneetha</h2>
+        <p class="author-role">Associate Professor &mdash; Department of Information Technology</p>
+        <p class="author-bio">
+          A dedicated academic and researcher specializing in Information Technology with a focus on network systems and cybersecurity. This resource has been curated to provide students, practitioners, and enthusiasts with a clear and structured foundation in network security concepts, threats, and best practices.
+        </p>
+        <div class="author-badges">
+          <span class="badge">🎓 Ph.D.</span>
+          <span class="badge">💻 Information Technology</span>
+          <span class="badge">🔐 Network Security</span>
+        </div>
       </div>
     </div>
   </div>
